@@ -6,6 +6,7 @@ services:
       - LOGSTASH_ELASTICSEARCH_HOST=<link to elasticsearch instance>
       - LOGSTASH_ELASTICSEARCH_USER=<elasticsearch user>
       - LOGSTASH_ELASTICSEARCH_PASS=<elasticsearch password>
+      - LOGSTASH_INDEX_NAME=<name of index>
     volumes:
       - <path to chrome history db>:/usr/share/logstash/db/history.sqlite3
       - <path to a folder where to store the last row synchronized>:/usr/share/logstash/db/last_run/
