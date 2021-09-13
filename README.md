@@ -1,5 +1,6 @@
 Run this before importing:
 
+```
 curl -XPUT "<elasticsearch server url>/<name of the index specified in docker-compose file>" -H 'Content-Type: application/json' -d'
 {
   "mappings": {
@@ -42,3 +43,4 @@ curl -XPUT "<elasticsearch server url>/<name of the index specified in docker-co
     }
   }
 }'
+```
