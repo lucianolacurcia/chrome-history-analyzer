@@ -1,4 +1,8 @@
-Run this before importing:
+
+To know where is located your hystory database loo at:
+https://stackoverflow.com/questions/8936878/where-does-chrome-save-its-sqlite-database-to
+
+Then create the index in Elastic:
 
 ```
 curl -XPUT "<elasticsearch server url>/<name of the index specified in docker-compose file>" -H 'Content-Type: application/json' -d'
@@ -42,3 +46,4 @@ curl -XPUT "<elasticsearch server url>/<name of the index specified in docker-co
   }
 }'
 ```
+Then edit the docker-compose file and fill it with your data including the name of the just created index...
