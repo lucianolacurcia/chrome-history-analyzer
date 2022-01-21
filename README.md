@@ -3,7 +3,6 @@ Run this before importing:
 ```
 curl -XPUT "<elasticsearch server url>/<name of the index specified in docker-compose file>" -H 'Content-Type: application/json' -d'
 {
-  "mappings": {
     "doc": {
       "properties": {
         "tiempo": {
@@ -40,7 +39,6 @@ curl -XPUT "<elasticsearch server url>/<name of the index specified in docker-co
           "type": "long"
         }
       }
-    }
   }
 }'
 ```
