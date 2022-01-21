@@ -1,4 +1,4 @@
-FROM docker.elastic.co/logstash/logstash:6.8.18
+FROM docker.elastic.co/logstash/logstash:7.16.3
 
 RUN /usr/share/logstash/bin/logstash-plugin install logstash-filter-aggregate
 
