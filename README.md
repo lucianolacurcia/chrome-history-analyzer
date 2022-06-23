@@ -5,10 +5,20 @@ This project was created for understanding how logstash, elasticsearch and kiban
 ### Architecture
 ![](./arch.png)
 
-To know where is located your hystory database loo at:
-https://stackoverflow.com/questions/8936878/where-does-chrome-save-its-sqlite-database-to
+### Usage
+0. [Create](#create-index) an index in your elasticsearch cluster for storing each row of your chrome database.
+1. Reame the docker-compose.example.yml to docke-compose.yml
+2. Add the required information to this file:
+	-	The address to the elasticsearch cluster.
+	-	elasticsearch user and password
+	-	path to the chome history database, you can find where is located in your system [here](https://stackoverflow.com/questions/8936878/where-does-chrome-save-its-sqlite-database-to).
+	-	path to the folder where to store a file that records the last row sended to elasticsearch on the last run.
+	-	add the name of the index you created in 0.
+3. docker-compose up
 
-Then create the index in Elastic:
+
+
+#### [Create elasticsearch index:][create-index]
 
 ```
 curl -XPUT "<elasticsearch server url>/<name of the index specified in docker-compose file>" -H 'Content-Type: application/json' -d'
@@ -52,4 +62,3 @@ curl -XPUT "<elasticsearch server url>/<name of the index specified in docker-co
   }
 }'
 ```
-Then edit the docker-compose file and fill it with your data including the name of the just created index...
