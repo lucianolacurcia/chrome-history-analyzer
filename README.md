@@ -3,7 +3,7 @@
 This project was created for understanding how logstash, elasticsearch and kibana works, for sure MS Excel is more than enought for analizing and storing browsing data.
 
 ### Architecture
-![](./chrome-analizer-arch.png)
+![](./arch.png)
 
 To know where is located your hystory database loo at:
 https://stackoverflow.com/questions/8936878/where-does-chrome-save-its-sqlite-database-to
