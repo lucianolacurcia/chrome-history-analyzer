@@ -1,4 +1,4 @@
-# Send your chrome's browsing history data to elasticsearch for analizing it!
+# Send your chrome's browsing history data to elasticsearch for analyzing it!
 
 This project was created for understanding how logstash, elasticsearch and kibana works, for sure MS Excel is more than enought for analizing and storing browsing data.
 
@@ -16,7 +16,7 @@ This project was created for understanding how logstash, elasticsearch and kiban
 	-	add the name of the index you created in 0.
 3. docker-compose up
 
-If everything worked as expected, now you have your browsing data in elasticsearch ready for being analized!
+If everything worked as expected, now you have your browsing data in elasticsearch ready for being analyzed!
 
 
 
