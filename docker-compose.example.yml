@@ -1,13 +1,12 @@
 version: '3.7'
 services:
   logstash:
-    image: "chrome-history"
+    build: .
     environment:
-      - LOGSTASH_ELASTICSEARCH_HOST=<link to elasticsearch instance>
+      - LOGSTASH_ELASTICSEARCH_HOST=<link to elasticsearch cluster>
       - LOGSTASH_ELASTICSEARCH_USER=<elasticsearch user>
       - LOGSTASH_ELASTICSEARCH_PASS=<elasticsearch password>
-      - LOGSTASH_INDEX_NAME=<name of index>
+      - LOGSTASH_INDEX_NAME=<index>
     volumes:
       - <path to chrome history db>:/usr/share/logstash/db/history.sqlite3
       - <path to a folder where to store the last row synchronized>:/usr/share/logstash/db/last_run/
-    network_mode: "host"
