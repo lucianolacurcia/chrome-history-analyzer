@@ -6,7 +6,7 @@ This project was created for understanding how logstash, elasticsearch and kiban
 ![](./arch.png)
 
 ### Usage
-0. [Create](#create-index) an index in your elasticsearch cluster for storing each row of your chrome database.
+0. [Create](#create-elasticsearch-index) an index in your elasticsearch cluster for storing each row of your chrome database.
 1. Reame the docker-compose.example.yml to docke-compose.yml
 2. Add the required information to this file:
 	-	The address to the elasticsearch cluster.
@@ -18,7 +18,7 @@ This project was created for understanding how logstash, elasticsearch and kiban
 
 
 
-#### [Create elasticsearch index:][create-index]
+#### Create elasticsearch index:
 
 ```
 curl -XPUT "<elasticsearch server url>/<name of the index specified in docker-compose file>" -H 'Content-Type: application/json' -d'
